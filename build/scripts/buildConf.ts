@@ -42,22 +42,19 @@ function createConfig(params: CreateConfigParams) {
 
       /** 上传source map */
       const result = shell.exec(
-        `sentry-cli releases -p ${sentryProjectName} files @${shortVersion} upload-sourcemaps './dist/assets'  --url-prefix '~/assets'`,
+        `sentry-cli releases -p ${sentryProjectName} files @${shortVersion} upload-sourcemaps './dist/assets'  --url-prefix '~/assets'`
       )
-      consola.log('code:', result.code)
-      if (result.code !== 0)
-        throw new Error('source map 上传失败!')
+      console.log('code:', result.code)
+      if (result.code !== 0) throw new Error('source map 上传失败!')
       const rmResult = shell.rm('-f', getRootPath('dist/assets/*.js.map'))
 
-      if (rmResult.code !== 0)
-        throw new Error('source map 删除失败!')
+      if (rmResult.code !== 0) throw new Error('source map 删除失败!')
     }
 
-    consola.log(`${chalk.cyan(`✨ [${pkg.name}]`)} - configuration file is build successfully:`)
-    consola.log(`${chalk.gray(`${OUTPUT_DIR}/${chalk.green(configFileName)}`)}\n`)
-  }
-  catch (error) {
-    consola.log(chalk.red(`configuration file configuration file failed to package:\n${error}`))
+    console.log(`${chalk.cyan(`✨ [${pkg.name}]`)} - configuration file is build successfully:`)
+    console.log(`${chalk.gray(`${OUTPUT_DIR}/${chalk.green(configFileName)}`)}\n`)
+  } catch (error) {
+    console.log(chalk.red(`configuration file configuration file failed to package:\n${error}`))
   }
 }
 

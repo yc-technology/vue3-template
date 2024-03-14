@@ -22,8 +22,8 @@ export function configHtmlPlugin(env: ViteEnv, isBuild: boolean) {
     tags.push({
       tag: 'script',
       attrs: {
-        src: getAppConfigSrc(),
-      },
+        src: getAppConfigSrc()
+      }
     })
 
     // tags.push({
@@ -36,8 +36,8 @@ export function configHtmlPlugin(env: ViteEnv, isBuild: boolean) {
     tags.push({
       tag: 'script',
       attrs: {
-        src: 'https://cdn.jsdelivr.net/npm/bignumber.js@9.1.0/bignumber.min.js',
-      },
+        src: 'https://cdn.jsdelivr.net/npm/bignumber.js@9.1.0/bignumber.min.js'
+      }
     })
   }
 
@@ -47,11 +47,11 @@ export function configHtmlPlugin(env: ViteEnv, isBuild: boolean) {
     inject: {
       // Inject data into ejs template
       data: {
-        title: VITE_GLOB_APP_TITLE,
+        title: VITE_GLOB_APP_TITLE
       },
       // Embed the generated app.config.js file
-      tags,
-    },
+      tags
+    }
   })
   return htmlPlugin
 }

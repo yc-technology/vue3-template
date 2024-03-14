@@ -25,7 +25,9 @@ export default defineComponent({
             default: (data: { foo: string }) => <div>{data.foo}</div>
           }}
         </JSXCounter>
-        <ElButton onClick={() => a.value++}>add</ElButton>
+        <ElButton onClick={() => a.value++} type="primary">
+          add
+        </ElButton>
       </div>
     )
   }

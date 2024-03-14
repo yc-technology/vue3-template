@@ -7,7 +7,7 @@ function getGlobEnvConfig(): GlobEnvConfig {
   return env as unknown as GlobEnvConfig
 }
 
-const reg = /[a-zA-Z\_]*/
+const reg = /[a-zA-Z_]*/
 
 function getShortName(env: any) {
   return `__PRODUCTION__${env.VITE_GLOB_APP_SHORT_NAME || '__APP'}__CONF__`
@@ -34,7 +34,7 @@ const {
   VITE_GLOB_SENTRY_DSN,
   VITE_GLOB_USE_PWA,
   VITE_GLOB_ROUTE_BASE_URL,
-  VITE_GLOB_STRIPE_KEY,
+  VITE_GLOB_STRIPE_KEY
 } = ENV
 
 if (!reg.test(VITE_GLOB_APP_SHORT_NAME))
@@ -60,7 +60,7 @@ export function useGlobSetting(): Readonly<GlobConfig> {
     openSentry: VITE_GLOB_OPEN_SENTRY === 'true',
     sentryDsn: VITE_GLOB_SENTRY_DSN,
     usePwa: VITE_GLOB_USE_PWA === 'true',
-    stripeKey: VITE_GLOB_STRIPE_KEY,
+    stripeKey: VITE_GLOB_STRIPE_KEY
   }
   return glob as Readonly<GlobConfig>
 }

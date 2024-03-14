@@ -15,7 +15,7 @@
     "strictNullChecks": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vitest", "vite/client", "vite-plugin-vue-layouts/client", "element-plus/global"],
+    "types": ["vitest", "vite/client", "vite-plugin-vue-layouts/client"],
     "paths": {
       "~/*": ["src/*"],
       "@/*": ["src/*"]

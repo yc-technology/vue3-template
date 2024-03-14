@@ -6,14 +6,17 @@ import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import ElementPlus from 'unplugin-element-plus/vite'
+
 import Inspect from 'vite-plugin-inspect'
 import Layout from 'vite-plugin-vue-layouts'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
-// import visualizerPlugin from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 import { createVitePlugins } from './build/plugins'
 import { wrapperEnv } from './build/utils'
 import { createProxy } from './build/vite/proxy'
+
 import pkg from './package.json'
 
 export default ({ command, mode }: ConfigEnv) => {
@@ -45,12 +48,13 @@ export default ({ command, mode }: ConfigEnv) => {
     },
     build: {
       rollupOptions: {
+        external: ['vue', 'vue-router', 'vue-i18n'],
         plugins: [
-          // visualizerPlugin({
-          //   open: false,
-          //   gzipSize: true,
-          //   brotliSize: true,
-          // }),
+          visualizer({
+            open: true,
+            gzipSize: true,
+            brotliSize: true
+          })
         ]
       },
       minify: 'terser',
@@ -74,11 +78,13 @@ export default ({ command, mode }: ConfigEnv) => {
       vueJsx(),
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
-        imports: ['vue', 'vue-router', 'vue-i18n', 'vue/macros', '@vueuse/head', '@vueuse/core'],
+        imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/head'],
         dts: 'src/auto-imports.d.ts',
         dirs: ['src/composables', 'src/stores', 'src/singleton'],
         vueTemplate: true
       }),
+
+      ElementPlus({}),
 
       Layout(),
 

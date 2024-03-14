@@ -1,4 +1,4 @@
-import type { HTMLAttributes, SetupContext, SlotsType, VNodeRef } from 'vue'
+import type { SetupContext, SlotsType, VNodeRef } from 'vue'
 import { ChildComponentProps } from '../childComponent'
 
 // 继承的属性不会出现在 props 中

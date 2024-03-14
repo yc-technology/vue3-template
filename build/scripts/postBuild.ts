@@ -10,13 +10,11 @@ export const runBuild = async () => {
     const argvList = process.argv.splice(2)
 
     // Generate configuration file
-    if (!argvList.includes('disabled-config'))
-      runBuildConfig()
+    if (!argvList.includes('disabled-config')) runBuildConfig()
 
-    consola.log(`✨ ${chalk.cyan(`[${pkg.name}]`)}` + ' - build successfully!')
-  }
-  catch (error) {
-    consola.log(chalk.red(`vite build error:\n${error}`))
+    console.log(`✨ ${chalk.cyan(`[${pkg.name}]`)}` + ' - build successfully!')
+  } catch (error) {
+    console.log(chalk.red(`vite build error:\n${error}`))
     process.exit(1)
   }
 }
