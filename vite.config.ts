@@ -8,6 +8,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Inspect from 'vite-plugin-inspect'
 import Layout from 'vite-plugin-vue-layouts'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+
 // import visualizerPlugin from 'rollup-plugin-visualizer'
 import { createVitePlugins } from './build/plugins'
 import { wrapperEnv } from './build/utils'
@@ -69,6 +71,7 @@ export default ({ command, mode }: ConfigEnv) => {
 
     plugins: [
       Vue(),
+      vueJsx(),
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: ['vue', 'vue-router', 'vue-i18n', 'vue/macros', '@vueuse/head', '@vueuse/core'],
