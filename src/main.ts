@@ -1,4 +1,4 @@
-import App from './App.vue'
+import App from './App'
 import type { UserModule } from './types'
 
 import './styles/main.css'

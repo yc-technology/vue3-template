@@ -1,4 +1,4 @@
-import { ElButton } from 'element-plus'
+import { NButton } from 'naive-ui'
 import type { SetupContext } from 'vue'
 import JSXCounter from '~/components/jsxCounter'
 type FComponentProps = {}
@@ -25,9 +25,9 @@ export default defineComponent({
             default: (data: { foo: string }) => <div>{data.foo}</div>
           }}
         </JSXCounter>
-        <ElButton onClick={() => a.value++} type="primary">
+        <NButton onClick={() => a.value++} type="primary">
           add
-        </ElButton>
+        </NButton>
       </div>
     )
   }

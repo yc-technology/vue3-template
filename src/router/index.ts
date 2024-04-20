@@ -13,6 +13,6 @@ export const staticRoutes: RouteRecordRaw[] = [
 const routes = setupLayouts(staticRoutes)
 
 export const router = createRouter({
-  history: createWebHistory(globSetting.routeBasePath),
+  history: createWebHistory(globSetting.publicPath),
   routes
 })

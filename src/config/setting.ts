@@ -20,21 +20,12 @@ const ENV = (isDevMode() ? getGlobEnvConfig() : window[ENV_NAME as any]) as unkn
 
 const {
   VITE_GLOB_API_URL,
-  VITE_GLOB_AI_API_URL,
   VITE_GLOB_APP_SHORT_NAME,
   VITE_GLOB_APP_VERSION,
   VITE_GLOB_PUBLIC_PATH,
-  VITE_GLOB_API_URL_PREFIX,
-  VITE_GLOB_OSS_URL,
-  VITE_GLOB_PC_URL,
   VITE_GLOB_OPEN_AES_ENCRYPT,
-  VITE_GLOB_OSS_REGION,
-  VITE_GLOB_OSS_BUCKET,
   VITE_GLOB_OPEN_SENTRY,
-  VITE_GLOB_SENTRY_DSN,
-  VITE_GLOB_USE_PWA,
-  VITE_GLOB_ROUTE_BASE_URL,
-  VITE_GLOB_STRIPE_KEY
+  VITE_GLOB_SENTRY_DSN
 } = ENV
 
 if (!reg.test(VITE_GLOB_APP_SHORT_NAME))
@@ -45,22 +36,12 @@ export function useGlobSetting(): Readonly<GlobConfig> {
   const glob: Readonly<GlobConfig> = {
     title: 'template',
     apiUrl: VITE_GLOB_API_URL,
-    aiApiUrl: VITE_GLOB_AI_API_URL,
     shortName: VITE_GLOB_APP_SHORT_NAME,
     version: VITE_GLOB_APP_VERSION,
     publicPath: VITE_GLOB_PUBLIC_PATH,
-    routeBasePath: VITE_GLOB_ROUTE_BASE_URL,
-    urlPrefix: VITE_GLOB_API_URL_PREFIX,
-    ossUrl: VITE_GLOB_OSS_URL,
-    ossImageUrl: `${VITE_GLOB_OSS_URL}frontend/images/`,
-    pcUrl: VITE_GLOB_PC_URL,
     openAesEncrypt: VITE_GLOB_OPEN_AES_ENCRYPT === 'true',
-    ossRegion: VITE_GLOB_OSS_REGION,
-    ossBucket: VITE_GLOB_OSS_BUCKET,
     openSentry: VITE_GLOB_OPEN_SENTRY === 'true',
-    sentryDsn: VITE_GLOB_SENTRY_DSN,
-    usePwa: VITE_GLOB_USE_PWA === 'true',
-    stripeKey: VITE_GLOB_STRIPE_KEY
+    sentryDsn: VITE_GLOB_SENTRY_DSN
   }
   return glob as Readonly<GlobConfig>
 }

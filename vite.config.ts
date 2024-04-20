@@ -6,11 +6,10 @@ import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import ElementPlus from 'unplugin-element-plus/vite'
 
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import Inspect from 'vite-plugin-inspect'
 import Layout from 'vite-plugin-vue-layouts'
-import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import { visualizer } from 'rollup-plugin-visualizer'
 import { createVitePlugins } from './build/plugins'
@@ -84,7 +83,6 @@ export default ({ command, mode }: ConfigEnv) => {
         vueTemplate: true
       }),
 
-      ElementPlus({}),
 
       Layout(),
 
