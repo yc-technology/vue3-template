@@ -83,8 +83,9 @@ export default ({ command, mode }: ConfigEnv) => {
         vueTemplate: true
       }),
 
-
-      Layout(),
+      Layout({
+        extensions: ['vue', 'tsx']
+      }),
 
       // https://github.com/antfu/unplugin-vue-components
       Components({
