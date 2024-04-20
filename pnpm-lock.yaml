@@ -11,6 +11,9 @@ importers:
       '@vueuse/core':
         specifier: ^10.9.0
         version: 10.9.0(vue@3.4.23(typescript@4.9.5))
+      '@yc-tech/vue-component':
+        specifier: ^0.1.2
+        version: 0.1.2(vue@3.4.23(typescript@4.9.5))
       axios:
         specifier: ^1.6.8
         version: 1.6.8
@@ -1224,6 +1227,14 @@ packages:
   '@yc-tech/prettier-config@0.1.0':
     resolution: {integrity: sha512-2XKagWSKnMxOJoE5WY36SXOhRlFH7UQ4BuXYUQFdiCSs8eyIVlNFF3Dv4hauK+zgMOtV48Zm/pQv9f40YLJC3g==, tarball: https://registry.npmjs.org/@yc-tech/prettier-config/-/prettier-config-0.1.0.tgz}
 
+  '@yc-tech/shared@0.1.4':
+    resolution: {integrity: sha512-UbDJxHylwdbmkUCaBNkzznxQrm6qOaqDbVqOIksiBhnMJdwwCkPW6yxkFbJwbVI9Y6QRgZ90VHjS56Qx9es2ZQ==, tarball: https://registry.npmjs.org/@yc-tech/shared/-/shared-0.1.4.tgz}
+
+  '@yc-tech/vue-component@0.1.2':
+    resolution: {integrity: sha512-mzQ+EzwT/94NbqP/KkOYB+84g+iuxbTg/MMXIybXVFColrxMHQA5JlmHinedtXNMgGBhB0m2xejMRS7QI0In1g==, tarball: https://registry.npmjs.org/@yc-tech/vue-component/-/vue-component-0.1.2.tgz}
+    peerDependencies:
+      vue: ^3.4.23
+
   abbrev@2.0.0:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==, tarball: https://registry.npmjs.org/abbrev/-/abbrev-2.0.0.tgz}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -1370,6 +1381,9 @@ packages:
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==, tarball: https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz}
+
+  bignumber.js@9.1.2:
+    resolution: {integrity: sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==, tarball: https://registry.npmjs.org/bignumber.js/-/bignumber.js-9.1.2.tgz}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==, tarball: https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.3.0.tgz}
@@ -1519,6 +1533,10 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==, tarball: https://registry.npmjs.org/cliui/-/cliui-8.0.1.tgz}
     engines: {node: '>=12'}
 
+  clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==, tarball: https://registry.npmjs.org/clsx/-/clsx-2.1.0.tgz}
+    engines: {node: '>=6'}
+
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==, tarball: https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz}
 
@@ -1635,6 +1653,9 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==, tarball: https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz}
     engines: {node: '>= 8'}
+
+  crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==, tarball: https://registry.npmjs.org/crypto-js/-/crypto-js-4.2.0.tgz}
 
   css-render@0.15.12:
     resolution: {integrity: sha512-eWzS66patiGkTTik+ipO9qNGZ+uNuGyTmnz6/+EJIiFg8+3yZRpnMwgFo8YdXhQRsiePzehnusrxVvugNjXzbw==, tarball: https://registry.npmjs.org/css-render/-/css-render-0.15.12.tgz}
@@ -3494,6 +3515,9 @@ packages:
     resolution: {integrity: sha512-HwOKAP7Wc5aRGYdKH+dw0PRRpbO841v2DENBtjnR5HFWoiNByAl7vrx3p0G/rCyYXQsrxqtX48TImFtPcIHSpQ==, tarball: https://registry.npmjs.org/synckit/-/synckit-0.8.8.tgz}
     engines: {node: ^14.18.0 || >=16.0.0}
 
+  tailwind-merge@2.3.0:
+    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==, tarball: https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-2.3.0.tgz}
+
   tailwindcss@3.4.3:
     resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==, tarball: https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.3.tgz}
     engines: {node: '>=14.0.0'}
@@ -3705,6 +3729,10 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==, tarball: https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz}
+    hasBin: true
+
+  uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==, tarball: https://registry.npmjs.org/uuid/-/uuid-9.0.1.tgz}
     hasBin: true
 
   vary@1.1.2:
@@ -3983,6 +4011,9 @@ packages:
   yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==, tarball: https://registry.npmjs.org/yocto-queue/-/yocto-queue-1.0.0.tgz}
     engines: {node: '>=12.20'}
+
+  zod@3.22.5:
+    resolution: {integrity: sha512-HqnGsCdVZ2xc0qWPLdO25WnseXThh0kEYKIdV5F/hTHO75hNZFp8thxSeHhiPrHZKrFTo1SOgkAj9po5bexZlw==, tarball: https://registry.npmjs.org/zod/-/zod-3.22.5.tgz}
 
 snapshots:
 
@@ -4993,6 +5024,25 @@ snapshots:
 
   '@yc-tech/prettier-config@0.1.0': {}
 
+  '@yc-tech/shared@0.1.4':
+    dependencies:
+      bignumber.js: 9.1.2
+      clsx: 2.1.0
+      crypto-js: 4.2.0
+      tailwind-merge: 2.3.0
+      uuid: 9.0.1
+      zod: 3.22.5
+
+  '@yc-tech/vue-component@0.1.2(vue@3.4.23(typescript@4.9.5))':
+    dependencies:
+      '@vueuse/core': 10.9.0(vue@3.4.23(typescript@4.9.5))
+      '@yc-tech/shared': 0.1.4
+      lodash-es: 4.17.21
+      naive-ui: 2.38.1(vue@3.4.23(typescript@4.9.5))
+      vue: 3.4.23(typescript@4.9.5)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+
   abbrev@2.0.0: {}
 
   accepts@1.3.8:
@@ -5116,6 +5166,8 @@ snapshots:
   bcrypt-pbkdf@1.0.2:
     dependencies:
       tweetnacl: 0.14.5
+
+  bignumber.js@9.1.2: {}
 
   binary-extensions@2.3.0: {}
 
@@ -5285,6 +5337,8 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
+  clsx@2.1.0: {}
+
   color-convert@1.9.3:
     dependencies:
       color-name: 1.1.3
@@ -5397,6 +5451,8 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  crypto-js@4.2.0: {}
 
   css-render@0.15.12:
     dependencies:
@@ -7416,6 +7472,10 @@ snapshots:
       '@pkgr/core': 0.1.1
       tslib: 2.6.2
 
+  tailwind-merge@2.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.4
+
   tailwindcss@3.4.3:
     dependencies:
       '@alloc/quick-lru': 5.2.0
@@ -7653,6 +7713,8 @@ snapshots:
   utils-merge@1.0.1: {}
 
   uuid@8.3.2: {}
+
+  uuid@9.0.1: {}
 
   vary@1.1.2: {}
 
@@ -7934,3 +7996,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   yocto-queue@1.0.0: {}
+
+  zod@3.22.5: {}

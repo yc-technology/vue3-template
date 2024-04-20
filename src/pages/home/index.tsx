@@ -1,4 +1,5 @@
-import { NButton } from 'naive-ui'
+import { YcButton } from '@yc-tech/vue-component'
+import { Type } from 'naive-ui/es/button/src/interface'
 import type { SetupContext } from 'vue'
 import JSXCounter from '~/components/jsxCounter'
 type FComponentProps = {}
@@ -12,7 +13,11 @@ export default defineComponent({
   props: {},
   setup(props: FComponentProps, context: SetupContext<Events>) {
     const a = ref(1)
+    const buttonType = ref<Type>('primary')
     consola.log(a.value)
+    function onClick() {
+      buttonType.value = buttonType.value === 'primary' ? 'warning' : 'primary'
+    }
     return () => (
       <div>
         <JSXCounter
@@ -25,9 +30,9 @@ export default defineComponent({
             default: (data: { foo: string }) => <div>{data.foo}</div>
           }}
         </JSXCounter>
-        <NButton onClick={() => a.value++} type="primary">
+        <YcButton onClick={onClick} type={buttonType.value}>
           add
-        </NButton>
+        </YcButton>
       </div>
     )
   }
