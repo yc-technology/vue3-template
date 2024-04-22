@@ -28,7 +28,7 @@
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.23",
-    "vue-i18n": "^9.13.0",
+    "vue-i18n": "^9.13.1",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
@@ -62,10 +62,10 @@
     "unplugin-auto-import": "^0.15.3",
     "unplugin-element-plus": "^0.8.0",
     "unplugin-vue-components": "^0.24.1",
-    "vite": "^5.2.9",
+    "vite": "^5.2.10",
     "vite-plugin-externals": "^0.6.2",
     "vite-plugin-html": "^3.2.2",
-    "vite-plugin-inspect": "^0.8.3",
+    "vite-plugin-inspect": "^0.8.4",
     "vite-plugin-vue-layouts": "^0.11.0",
     "vitest": "^0.29.8",
     "vue-tsc": "^1.8.27"

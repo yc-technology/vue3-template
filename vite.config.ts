@@ -54,7 +54,15 @@ export default ({ command, mode }: ConfigEnv) => {
             gzipSize: true,
             brotliSize: true
           })
-        ]
+        ],
+        output: {
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              // 让每个插件都打包成独立的文件
+              return id.toString().split('node_modules/.pnpm/')[1].split('/')[0].toString()
+            }
+          }
+        }
       },
       minify: 'terser',
       sourcemap: VITE_DROP_CONSOLE,
